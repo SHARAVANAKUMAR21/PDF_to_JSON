@@ -17,7 +17,7 @@ This tool is particularly useful for scenarios where automated data extraction a
 - **Output**: Generates a JSON file containing the structured data extracted from the PDF.
 
 ## Requirements
-
+- `create a venv` 
 - `Python` 3.12.4 (3.7 + any will work) 
 - `pdfplumber` library
 - `pydantic` library

@@ -20,7 +20,7 @@ This tool is particularly useful for scenarios where automated data extraction a
 
 - **Tables:** Extracted tables are converted into `Table` objects.
 
-- **Images:** - `ImageBlock` objects
+- **Images:** - `ImageBlock` objects(not done)
 
 3. #### Data Validation and Serialization:
 - Uses Pydantic models (`PDFData`, `Table`, `TextBlock`, `ImageBlock`) to validate and serialize the extracted data into JSON format.

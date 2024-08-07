@@ -9,6 +9,25 @@ The PDF to JSON Converter is designed to streamline the process of extracting da
 This tool is particularly useful for scenarios where automated data extraction and transformation are required, such as data analysis, reporting, and integration with other systems.
 
 
+## Approach
+1. #### PDF Reading:
+- Utilizes `pdfplumber` to open and read the PDF file. Handles any exceptions that may occur during this process.
+
+2. #### Data Extraction:
+- **Title:** Extracted from the first line of text on the first page.
+
+- **Text Blocks:** Text is split into lines and converted into `TextBlock` objects.
+
+- **Tables:** Extracted tables are converted into `Table` objects.
+
+- **Images:** - `ImageBlock` objects
+
+3. #### Data Validation and Serialization:
+- Uses Pydantic models (`PDFData`, `Table`, `TextBlock`, `ImageBlock`) to validate and serialize the extracted data into JSON format.
+
+4. #### Execution:
+ - The `main` function coordinates the process: reading the PDF, extracting data, and serializing it to JSON.
+
 ## Features
 
 - **PDF Reading**: Reads a PDF file using `pdfplumber`.
@@ -17,7 +36,7 @@ This tool is particularly useful for scenarios where automated data extraction a
 - **Output**: Generates a JSON file containing the structured data extracted from the PDF.
 
 ## Requirements
-- `create a venv` 
+
 - `Python` 3.12.4 (3.7 + any will work) 
 - `pdfplumber` library
 - `pydantic` library
